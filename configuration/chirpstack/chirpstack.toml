@@ -63,12 +63,14 @@
   #
   # Multiple regions can be enabled simultaneously. Each region must match
   # the 'name' parameter of the region configuration in '[[regions]]'.
+
   enabled_regions=[
     "as923",
     "as923_2",
     "as923_3",
     "as923_4",
     "au915_0",
+    "au915_1",
     "cn470_10",
     "cn779",
     "eu433",
@@ -80,7 +82,17 @@
     "us915_0",
     "us915_1",
   ]
+[[regions]]
+  name="au915_0"
+  description="AU915 sub-band 0"
+  region="AU915"
+  enabled_uplink_channels=[0,1,2,3,4,5,6,7]
 
+[[regions]]
+  name="au915_1"
+  description="AU915 sub-band 1"
+  region="AU915"
+  enabled_uplink_channels=[8,9,10,11,12,13,14,15]
 
 # API interface configuration.
 [api]
